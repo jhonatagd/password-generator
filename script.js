@@ -18,5 +18,17 @@ sliderElement.oniput = function(){
 function generatePassword(){
     
     let pass = "";
-    for()
+
+    for(let i = 0, n = charset.length; i < sliderElement.value; ++1){
+        pass += charset.charAt(Math.floor(Math.random()* n))
+    }
+
+    containerPassword.classList.remove("hide");
+    password.innerHTML = pass;
+
+}
+
+function copyPassword(){
+    alert("Senha copiada com sucesso!")
+    navigator.clipboard.writeText(novaSenha);
 }
